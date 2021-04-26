@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CategoryService} from './category.service';
 @Component({
   selector: 'app-root',
@@ -6,7 +6,7 @@ import {CategoryService} from './category.service';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit {
-  title = 'OLX for Students';
+  title = 'Book Store';
   logged = false;
 
   username = '';
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     let token = localStorage.getItem('token');
-    if (token){
+    if (token) {
       this.logged = true;
     }
   }

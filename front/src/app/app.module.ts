@@ -15,14 +15,12 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import{AuthInterceptor} from './auth.interceptor';
+import {AuthInterceptor} from './auth.interceptor';
 import { AuthorComponent } from './author/author.component';
 import { ProductbyauthorComponent } from './productbyauthor/productbyauthor.component';
 
 @NgModule({
   imports: [
-    
-  
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -37,7 +35,6 @@ import { ProductbyauthorComponent } from './productbyauthor/productbyauthor.comp
     TopBarComponent,
     ProductDetailComponent,
     ProductListComponent,
-    
     CategoryComponent,
     ProductDetailComponent,
     NavComponent,
@@ -49,9 +46,9 @@ import { ProductbyauthorComponent } from './productbyauthor/productbyauthor.comp
   ],
   providers: [
     {
-      provide:HTTP_INTERCEPTORS,
-      useClass:AuthInterceptor,
-      multi:true
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
     }
   ],
   bootstrap: [ AppComponent ]

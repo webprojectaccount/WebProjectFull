@@ -10,12 +10,14 @@ import {Product} from '../models';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products:Product[]=[];
+  products: Product[] = [];
 
-  constructor(public categoryService: CategoryService,public route:ActivatedRoute) {}
+  constructor(public categoryService: CategoryService,
+              public route: ActivatedRoute) {}
+  numberOfLikes = 10;
 
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getProductsList();
   }
 
@@ -28,14 +30,20 @@ export class ProductListComponent implements OnInit {
       });
   }
 
+
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
-  share(product) {
-     const url: string = window.location.href + '/' + product.id;
-      window.alert(`The product ${ product.name } has been shared!`);
-      window.open(`https://api.whatsapp.com/send?phone=77075145613&text=Look+at+this+product+${ product.name }+here+${ product.link }`);
-    }
+  sharetowhatsapp(product) {
+    window.open(`whatsapp://send?text=http://localhost:4200/products/${product.id}`);
+  }
+  sharetotelegram(product) {
+    window.open( `https://t.me/share/url?url=http://localhost:4200/products/${product.id}`);
+  }
+  likeButtonClick() {
+    this.numberOfLikes++;
+  }
+
 }
 
 

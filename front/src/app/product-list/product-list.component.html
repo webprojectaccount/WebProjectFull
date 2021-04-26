@@ -3,23 +3,33 @@
   <div class="products">
     <div class="product-detail" *ngFor="let product of products">
       <div class="polaroid">
-  
+
         <img src="{{product.pict}}" width="150" height="200" style="display: block;">
       <h4>
-        
-        <a [routerLink]="'/products/'+product.id" [title]="product.name + ' details'" >
+
+        <a class="pr_n" [routerLink]="'/products/'+product.id" [title]="product.name + ' details'" >
           {{ product.name }}
         </a>
       </h4>
-      <button (click)="share(product)">
-        Share
-      </button>
+
+        <button id="wa_f" (click)="sharetowhatsapp(product)"><img src="https://cdn.worldvectorlogo.com/logos/whatsapp-symbol.svg" width="50" height="35">
+          Share to WhatsApp
+        </button>
+
+        <button id="tg_f" (click)="sharetotelegram(product)"><img src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg" width="50" height="35">
+          Share to Telegram
+        </button>
+
+        <button id="like_but" (click)="likeButtonClick()"><img src="https://avatanplus.com/files/resources/original/5eab1514d6099171cc4a598d.png" width="40" height="35">
+          Likes {{numberOfLikes}}
+        </button>
       <app-product-alerts
-      [product]="product" 
+      [product]="product"
       (notify)="onNotify()">
     </app-product-alerts>
       </div>
-      
+
     </div>
+    <div><button routerLink="" type="button" class="btn btn-outline-secondary">Go back</button></div>
   </div>
-  <button routerLink="">goBack</button>
+

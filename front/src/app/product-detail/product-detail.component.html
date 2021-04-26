@@ -1,20 +1,18 @@
-<div>
+<br><br><div>
   <div *ngIf="product">
       <h3>
           {{ product.name }}
       </h3>
-      <img src="{{ product.pict }}">
-      <p>
+      <img src="{{ product.pict }}" width="300" height="400"><br><br>
+      <p class="desc">
         {{ product.description }}
       </p>
       <h4> {{ product.price }}</h4>
     <br>
-    <button (click)="addToCart(product)">Buy</button>
+    <button (click)="addToCart(product)" type="button" class="btn btn-outline-success">Buy</button>
   </div>
-  <hr>
-  <button (click)="goBack()">go back</button>
+  <button routerLink="" type="button" class="btn btn-outline-secondary">Go back</button><br><br><br><br><br><br><br><br><br>
 
 
-  
+
 </div>
- 

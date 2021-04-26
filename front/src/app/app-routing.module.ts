@@ -5,24 +5,18 @@ import {ProductListComponent} from './product-list/product-list.component';
 import {CategoryComponent} from './category/category.component';
 import {CartComponent} from './cart/cart.component';
 import {ShippingComponent} from './shipping/shipping.component';
-import { NavComponent } from './nav/nav.component';
-import { AuthorComponent } from './author/author.component';
+import {NavComponent } from './nav/nav.component';
+import {AuthorComponent } from './author/author.component';
 
 
 
 const routes: Routes = [
-  {path:'',component:NavComponent},
-
+  {path: '', component: NavComponent},
   { path: 'category/:id/products', component: ProductListComponent },
   { path: 'products/:id', component: ProductDetailComponent },
-  {path:'authors',component:AuthorComponent},
-  // { path: 'category/:id', component: ProductListComponent},
-  // { path: '', redirectTo: '/products', pathMatch: 'full' },
+  {path: 'authors', component: AuthorComponent},
   { path: 'cart', component: CartComponent },
-  { path: 'shipping', component: ShippingComponent },
-  // {path:'categories',component:NavComponent},
-
-  
+  { path: 'shipping', component: ShippingComponent }
 ];
 
 @NgModule({

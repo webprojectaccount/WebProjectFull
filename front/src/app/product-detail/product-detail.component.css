@@ -1,0 +1,16 @@
+h3{
+  color: brown;
+  font-family: cursive;
+  font-size: 40px;
+}
+
+h4{
+  color: brown;
+  font-weight: bolder;
+}
+.desc{
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0d0d0d;
+}

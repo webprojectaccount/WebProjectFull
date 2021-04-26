@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { categories } from './categories';
-import {Category,Product,Authors, LoginResponse} from "./models";
+import {Category, Product, Authors, LoginResponse} from "./models";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({

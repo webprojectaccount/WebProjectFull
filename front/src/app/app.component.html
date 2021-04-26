@@ -1,26 +1,33 @@
 <app-top-bar></app-top-bar>
-<div *ngIf="!logged">
-  <h1>Login form</h1>
-  <p>Username: <input type="text" [(ngModel)]="username"></p>
-  <p>Password: <input type="text" [(ngModel)]="password"></p>
 
-  <button (click)="login()">Login</button>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<div *ngIf="!logged" class="wrapper fadeInDown">
+  <h1 id="logf">Login Form</h1>
+  <div id="formContent">
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="username">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="password">
+      <button class="btn btn-outline-primary" (click)="login()">Login</button>
+    </form>
+
+  </div>
 </div>
 <div class="wrapper" *ngIf="logged">
-<!-- <div class="row">
-  <div class="side">
-    <app-nav></app-nav>
-  </div>
-  <div class="content"> -->
+
     <router-outlet>
     </router-outlet>
-  <!-- </div>
-</div> -->
-<button (click)="logout()">Logout</button>
+
+<button class="btn_lo"(click)="logout()">Logout</button>
 </div>
 
 
-<!-- 
+<!--
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license

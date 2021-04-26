@@ -8,9 +8,9 @@ import {Category} from '../models';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  
-  categories: Category[]=[];
-  constructor(public categoryService: CategoryService){}
+
+  categories: Category[] = [];
+  constructor(public categoryService: CategoryService) {}
   // ngOnInit(): void {
   //   this.getCategories();
   // }
@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
   getCategories() {
     this.categoryService.getCategories()
       .subscribe(categories => {
-        this.categories = categories
+        this.categories = categories;
       });
   }
 

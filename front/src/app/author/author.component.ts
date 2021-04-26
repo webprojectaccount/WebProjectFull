@@ -8,8 +8,8 @@ import { CategoryService } from '../category.service';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
-  authors: Authors[]=[];
-  constructor(public categoryService: CategoryService){}
+  authors: Authors [] = [];
+  constructor(public categoryService: CategoryService) {}
   // ngOnInit(): void {
   //   this.getCategories();
   // }
@@ -23,7 +23,7 @@ export class AuthorComponent implements OnInit {
   getAuthors() {
     this.categoryService.getAuthors()
       .subscribe(authors => {
-        this.authors = authors
+        this.authors = authors;
       });
   }
 
