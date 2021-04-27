@@ -1,4 +1,4 @@
-export const environment = { а
+export const environment = { 
   production: true
 };
 
