@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; f
+import { Component, OnInit } from '@angular/core'; 
 
 @Component({
   selector: 'app-top-bar',
