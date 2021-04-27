@@ -6,7 +6,7 @@ export interface Category {
 export const categories = [
   {
     id: 1,
-    category: 'Художественная литература',
+    category: '',
     image: 'https://simg2.marwin.kz/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/c/o/tevis_u_hod_korolevy_2.jpg'
   },
   {

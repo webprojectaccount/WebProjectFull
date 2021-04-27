@@ -1,5 +1,6 @@
 """untitled1 URL Configuration
 
+
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -18,8 +19,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',include('main.urls)')),
-    # path('core/',include('core.urls')),
-    # path('hh/',include('hh.urls')),
-    path('',include('api.urls'))
+    path('', include('datasforfront.urls'))
 ]
