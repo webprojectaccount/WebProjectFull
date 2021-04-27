@@ -1,5 +1,5 @@
 export interface Author{
-    id:number,
+    id:number, f
     name:string,
     pict:string
   }
