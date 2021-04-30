@@ -17,6 +17,7 @@ export class ProductListComponent implements OnInit {
   numberOfLikes = 10;
 
 
+
   ngOnInit(): void {
     this.getProductsList();
   }

@@ -7,16 +7,17 @@ import {CartComponent} from './cart/cart.component';
 import {ShippingComponent} from './shipping/shipping.component';
 import {NavComponent } from './nav/nav.component';
 import {AuthorComponent } from './author/author.component';
-
+import {ProductbyauthorComponent} from './productbyauthor/productbyauthor.component';
 
 
 const routes: Routes = [
   {path: '', component: NavComponent},
-  { path: 'category/:id/products', component: ProductListComponent },
-  { path: 'products/:id', component: ProductDetailComponent },
+  {path: 'category/:id/products', component: ProductListComponent },
+  {path: 'products/:id', component: ProductDetailComponent },
   {path: 'authors', component: AuthorComponent},
-  { path: 'cart', component: CartComponent },
-  { path: 'shipping', component: ShippingComponent }
+  {path: 'authors/productbyauthors', component: ProductbyauthorComponent},
+  {path: 'cart', component: CartComponent },
+  {path: 'shipping', component: ShippingComponent }
 ];
 
 @NgModule({

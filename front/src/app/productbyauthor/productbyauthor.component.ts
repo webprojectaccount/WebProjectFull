@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../category.service'; 
+import { CategoryService } from '../category.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../models';
 
@@ -9,12 +9,13 @@ import { Product } from '../models';
   styleUrls: ['./productbyauthor.component.css']
 })
 export class ProductbyauthorComponent implements OnInit {
-  products:Product[]=[];
+  products: Product[] = [];
 
-  constructor(public categoryService: CategoryService,public route:ActivatedRoute) {}
+  constructor(public categoryService: CategoryService,
+              public route: ActivatedRoute) {}
 
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getProductbyAuthors();
   }
 
@@ -32,7 +33,7 @@ export class ProductbyauthorComponent implements OnInit {
   }
   share(product) {
      const url: string = window.location.href + '/' + product.id;
-      window.alert(`The product ${ product.name } has been shared!`);
-      window.open(`https://api.whatsapp.com/send?phone=77075145613&text=Look+at+this+product+${ product.name }+here+${ product.link }`);
+     window.alert(`The product ${ product.name } has been shared!`);
+     window.open(`https://api.whatsapp.com/send?phone=77075145613&text=Look+at+this+product+${ product.name }+here+${ product.link }`);
     }
 }

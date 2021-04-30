@@ -43,10 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_jwt',
-    # 'main',
-    # 'core',
-    'datasforfront',
-    # "hh",
+    'datasforfront'
+
 ]
 
 MIDDLEWARE = [
@@ -165,7 +163,7 @@ JWT_AUTH = {
     'JWT_VERIFY': True,
     'JWT_VERIFY_EXPIRATION': True,
     'JWT_LEEWAY': 0,
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=2),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=5),
     'JWT_AUDIENCE': None,
     'JWT_ISSUER': None,
 

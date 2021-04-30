@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   password = '';
   constructor(private categoryService: CategoryService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     let token = localStorage.getItem('token');
     if (token) {
       this.logged = true;
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
       })
   }
 
-  logout(){
+  logout() {
     localStorage.clear();
     this.logged = false;
   }

@@ -21,13 +21,14 @@ router-outlet {
 
 /* Text */
 
-#logf{
+#logf {
   font-size: 40px;
   font-family:cursive;
   font-weight: bold;
   position: relative;
   color: darkblue;
-  bottom: 200px
+  top:120px;
+  left:500px;
 }
 
 h2 {
@@ -49,7 +50,7 @@ p {
 a {
   cursor: pointer;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 35px;
   color:black;
   font-weight: bold;
   font-family: cursive;
@@ -206,9 +207,9 @@ h2 {
 /* STRUCTURE */
 
 .wrapper {
-  display: flex;
+  display: inline-block;
   align-items: center;
-  flex-direction: row;
+  flex-direction:row;
   justify-content: center;
 
 
@@ -220,8 +221,8 @@ h2 {
   background: #fff;
   padding: 30px;
   margin-top: 300px;
-  margin-right: 300px;
-  width: 90%;
+  margin-left: 400px;
+  width: 80%;
   max-width: 450px;
   position: relative;
   padding: 0px;

@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { categories } from './categories';
-import {Category, Product, Authors, LoginResponse} from "./models";
+import {Category, Product, Authors, LoginResponse} from './models';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
-  BASE_URL = 'http://localhost:8000'
+  BASE_URL = 'http://localhost:8000';
   constructor(private http: HttpClient) { }
 
   getCategory(id: number): Observable<Category> {
@@ -29,7 +29,7 @@ export class CategoryService {
   deleteCategory(id): Observable<any> {
     return this.http.delete(`${this.BASE_URL}/categories/${id}`);
   }
-  getAuthors(): Observable<Authors[]>{
+  getAuthors(): Observable<Authors[]> {
     return this.http.get<Authors[]>(`${this.BASE_URL}/authors`);
   }
   getProductbyAuthor(id): Observable<Product[]> {
@@ -39,6 +39,6 @@ export class CategoryService {
     return this.http.post<LoginResponse>(`${this.BASE_URL}/login/`, {
       username,
       password
-    })
+    });
   }
 }

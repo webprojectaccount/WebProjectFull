@@ -10,7 +10,7 @@ export class Product {
   price: string;
   pict: string;
   rating: number;
-  author_of_book: string;
+  authorofbook: string;
   category: string;
   authors: string;
 }

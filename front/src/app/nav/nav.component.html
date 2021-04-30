@@ -1,8 +1,10 @@
 <h1>Genres</h1>
   <div class="button" *ngFor="let category of categories">
     <a routerLink ="/category/:{{category.id}}/products">{{category.name}}</a>
-    <a routerLink ="/category/:{{category.id}}/products"><img src="{{category.pict}}" width="300" height ="400"></a>
+    <a routerLink ="/category/:{{category.id}}/products"><img src="{{category.pict}}" width="300" height ="350"></a>
+    <br><br>
     <button type="button" class="btn btn-outline-danger">Delete Category</button>
+    <br>
   </div>
 
 

@@ -1,12 +1,12 @@
 export interface Category {
-  id: number,
-  name: string,
-  pict: string
+  id: number;
+  name: string;
+  pict: string;
 }
 export const categories = [
   {
     id: 1,
-    category: '',
+    category: 'Художественная литература',
     image: 'https://simg2.marwin.kz/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/c/o/tevis_u_hod_korolevy_2.jpg'
   },
   {

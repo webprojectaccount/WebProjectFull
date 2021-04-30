@@ -14,8 +14,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {AuthInterceptor} from './auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
 import { AuthorComponent } from './author/author.component';
 import { ProductbyauthorComponent } from './productbyauthor/productbyauthor.component';
 

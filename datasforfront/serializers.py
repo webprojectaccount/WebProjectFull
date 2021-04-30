@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from datasforfront.models import Category, Products, Authors
-#first Serializer
+from datasforfront.models import Category, Products, Authors, AuthorOfBook
 
+#First serializer.Serializer
 class CategorySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()
@@ -16,7 +16,7 @@ class CategorySerializer(serializers.Serializer):
         instance.save()
         return instance
 
-#second Serializer
+#Second serializer.Serializer
 class AuthorsSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()
@@ -32,6 +32,7 @@ class AuthorsSerializer(serializers.Serializer):
         instance.save()
         return instance
 
+#First serializer.ModelSerializer
 class ProductsSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True)
     author = AuthorsSerializer(read_only=True)
@@ -40,6 +41,14 @@ class ProductsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Products
-        fields = ('id', 'name', 'description', 'price', 'pict', 'category', 'rating', 'category_id', 'author', 'authors_id' )
+        fields = ('id', 'name', 'description', 'price', 'pict', 'category', 'rating', 'category_id', 'author', 'authors_id')
 
+#Second serializer.ModelSerializer
+class AuthorOfBookSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+    name_of_author = serializers.CharField()
+    book_name = serializers.CharField()
 
+    class Meta:
+        model = AuthorOfBook
+        fields = ('id', 'name_of_author', 'book_name')

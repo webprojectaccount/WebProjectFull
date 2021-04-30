@@ -1,6 +1,6 @@
-export interface Author{
-    id:number, 
-    name:string,
-    pict:string
+export interface Author {
+    id: number;
+    name: string;
+    pict: string;
   }
-  export const authors= []
+export const authors = [];
